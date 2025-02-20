@@ -37,6 +37,7 @@
 #include "HubModuleDisplayComponent.h"
 #include "HubModuleWirelessTransceiverComponent.h"
 #include "ItemManualComponent.h"
+#include "HubModuleGraphicsAdapter.h"
 
 #if CC_PLATFORM_OS_X || CC_PLATFORM_IOS
 #include <CoreFoundation/CoreFoundation.h>
@@ -64,6 +65,7 @@ static void PreSetup(void)
 
 static void Setup(void)
 {
+    HKHubModuleGraphicsAdapterStaticGlyphInit();
     HKHubSystemRegister();
     HKHubProcessorComponentRegister();
     HKHubPortConnectionComponentRegister();
